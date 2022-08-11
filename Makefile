@@ -6,7 +6,7 @@
 #    By: fmauguin <fmauguin@student.42.fr >         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/03 14:23:03 by fmauguin          #+#    #+#              #
-#    Updated: 2022/08/11 15:44:31 by fmauguin         ###   ########.fr        #
+#    Updated: 2022/08/11 16:00:24 by fmauguin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ OUTDIR				:=	$(OBJDIR)
 DEBUGNAME			:= $(addsuffix .debug,$(PROGNAME))
 
 ifdef DEBUG
-	OPTFLAG 		:=	-g
+	OPTFLAG 		:=	-g -DDEBUG=1
 	LIBFT			:=	$(addsuffix .debug,$(LIBFT))
 	NAME			:=	$(DEBUGNAME)
 	BONUSNAME		:=	$(BONUSDEBUGNAME)
