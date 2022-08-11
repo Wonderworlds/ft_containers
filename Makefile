@@ -6,7 +6,7 @@
 #    By: fmauguin <fmauguin@student.42.fr >         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/03 14:23:03 by fmauguin          #+#    #+#              #
-#    Updated: 2022/08/10 14:00:55 by fmauguin         ###   ########.fr        #
+#    Updated: 2022/08/11 15:03:02 by fmauguin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,9 @@ SRCDIR				:=	./
 OBJDIR				:=	./obj
 DEBUGDIR			:=	./debugobj
 
-CPPSRC				:=	megaphone.cpp
+CPPSRC				:=	main.cpp
+VECTORSRC			:=	$(addprefix vector/srcs/, Vector.cpp \
+						)
 
 CC					:=	c++
 RM					:=	rm
@@ -47,8 +49,8 @@ $(OUTDIR)/%.o		:	$(SRCDIR)/%.cpp | $(OUTDIR)
 	@mkdir -p $(dir $@)
 	$(CC) -c -MMD -MP $(CCFLAGS) $(OPTFLAG) $(addprefix -I ,$(INCLUDEDIR)) $< -o $@
 
-$(NAME)				:	$(addprefix $(OUTDIR)/,$(CPPSRC:.cpp=.o))
-	$(CC) $(CCFLAGS) $(OPTFLAG) -o $(NAME) $(addprefix $(OUTDIR)/,$(CPPSRC:.cpp=.o)) $(LIBFLAGS)
+$(NAME)				:	$(addprefix $(OUTDIR)/,$(CPPSRC:.cpp=.o)) $(addprefix $(OUTDIR)/,$(VECTORSRC:.cpp=.o))
+	$(CC) $(CCFLAGS) $(OPTFLAG) -o $(NAME) $(addprefix $(OUTDIR)/,$(CPPSRC:.cpp=.o)) $(addprefix $(OUTDIR)/,$(VECTORSRC:.cpp=.o)) $(LIBFLAGS)
 
 all					:	$(NAME)
 
@@ -81,3 +83,4 @@ re					:	fclean
 .PHONY				:	all bonus clean fclean re
 
 -include	$(addprefix $(OUTDIR)/,$(CPPSRC:.cpp=.d))
+-include	$(addprefix $(OUTDIR)/,$(VECTORSRC:.cpp=.d))
