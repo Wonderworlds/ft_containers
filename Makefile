@@ -6,7 +6,7 @@
 #    By: fmauguin <fmauguin@student.42.fr >         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/03 14:23:03 by fmauguin          #+#    #+#              #
-#    Updated: 2022/08/11 16:00:24 by fmauguin         ###   ########.fr        #
+#    Updated: 2022/08/16 19:18:01 by fmauguin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ RM					:=	rm
 
 CCFLAGS				:=	-Wall -Wextra -Werror
 LIBFLAGS			:=
-OPTFLAG				:= -std=c++98
+OPTFLAG				:=	-std=c++98
 
 NAME				:=	$(PROGNAME)
 

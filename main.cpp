@@ -6,7 +6,7 @@
 /*   By: fmauguin <fmauguin@student.42.fr >         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 15:00:27 by fmauguin          #+#    #+#             */
-/*   Updated: 2022/08/16 19:14:23 by fmauguin         ###   ########.fr       */
+/*   Updated: 2022/08/16 19:23:25 by fmauguin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ int main(void)
 	PRINT("Hello World!");
 	PRINT(a.size());
 	PRINT(b.size());
+	PRINT(a.empty());
+	PRINT(b.empty());
 	PRINT(a.capacity());
 	PRINT(b.capacity());
 	PRINT(a.max_size());

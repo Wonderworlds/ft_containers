@@ -6,7 +6,7 @@
 /*   By: fmauguin <fmauguin@student.42.fr >         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 15:31:04 by fmauguin          #+#    #+#             */
-/*   Updated: 2022/08/16 19:13:44 by fmauguin         ###   ########.fr       */
+/*   Updated: 2022/08/16 19:23:33 by fmauguin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,11 @@ namespace ft
 		size_type capacity() const
 		{
 			return (this->_max_end - this->_start);
+		}
+
+		bool empty() const
+		{
+			return ((this->size()) ? false : true);
 		}
 
 	private:
