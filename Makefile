@@ -6,7 +6,7 @@
 #    By: fmauguin <fmauguin@student.42.fr >         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/03 14:23:03 by fmauguin          #+#    #+#              #
-#    Updated: 2022/08/16 19:18:01 by fmauguin         ###   ########.fr        #
+#    Updated: 2022/08/16 19:25:34 by fmauguin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,7 +70,7 @@ $(OUTDIR)			:
 	mkdir $(OUTDIR)
 
 clean				:
-	$(RM) -rf $(OBJDIR);
+	$(RM) -rf $(OBJDIR) $(DEBUGDIR);
 
 fclean				:	clean
 	$(RM) -f $(PROGNAME) $(DEBUGNAME)
