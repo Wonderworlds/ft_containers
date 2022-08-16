@@ -6,11 +6,12 @@
 /*   By: fmauguin <fmauguin@student.42.fr >         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 15:00:27 by fmauguin          #+#    #+#             */
-/*   Updated: 2022/08/11 16:08:20 by fmauguin         ###   ########.fr       */
+/*   Updated: 2022/08/16 18:48:13 by fmauguin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <string>
 
 #if DEBUG // CREATE A REAL STL EXAMPLE
 #include <map>
@@ -33,9 +34,12 @@ namespace ft = std;
 
 int main(void)
 {
-	ft::vector a;
+	ft::vector<long double> a;
+	ft::vector<double> b;
 
 	PRINT("Hello World!");
+	PRINT(a.max_size());
+	PRINT(b.max_size());
 	DEBUG_LOG("debug");
 	return (0);
 }
