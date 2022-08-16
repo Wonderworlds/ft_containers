@@ -6,7 +6,7 @@
 /*   By: fmauguin <fmauguin@student.42.fr >         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 15:00:27 by fmauguin          #+#    #+#             */
-/*   Updated: 2022/08/16 18:51:59 by fmauguin         ###   ########.fr       */
+/*   Updated: 2022/08/16 19:14:23 by fmauguin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,10 @@ int main(void)
 	ft::vector<double> b;
 
 	PRINT("Hello World!");
+	PRINT(a.size());
+	PRINT(b.size());
+	PRINT(a.capacity());
+	PRINT(b.capacity());
 	PRINT(a.max_size());
 	PRINT(b.max_size());
 	DEBUG_LOG("debug");
