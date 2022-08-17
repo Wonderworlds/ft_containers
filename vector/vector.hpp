@@ -6,7 +6,7 @@
 /*   By: fmauguin <fmauguin@student.42.fr >         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 15:31:04 by fmauguin          #+#    #+#             */
-/*   Updated: 2022/08/16 19:23:33 by fmauguin         ###   ########.fr       */
+/*   Updated: 2022/08/17 15:57:54 by fmauguin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,10 @@ namespace ft
 			return ((this->size()) ? false : true);
 		}
 
+		allocator_type get_allocator() const
+		{
+			return (this->_alloc);
+		}
 	private:
 		allocator_type _alloc;
 		pointer _start;
